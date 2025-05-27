@@ -125,6 +125,38 @@ namespace ConsoleApp1
                 Console.WriteLine(i);
             }
         }
+
+        static void N40()
+        {
+            for (int i = 0; i < 6; i++)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
+        //подсчитать количество двух знач чисел кратвых 11 и вывести в столбик
+        static void NNN()
+        {
+            int a = 0;
+            for (int i = 11; i < 100; i+=11)
+            {
+                Console.WriteLine(i);
+                a++;
+            }
+            Console.WriteLine("Количетсво "+a);
+        }
+        //подсчитать количество цифр веденного числа
+        static void NNN2()
+        {
+            int a = int.Parse(Console.ReadLine());
+            int i = 0;
+            if (a > 0)
+            {
+                a = a % 10;
+                i++;
+            }
+            Console.WriteLine(i);
+        }
         static void Main(string[] args)
         {
             //N1();
@@ -137,7 +169,10 @@ namespace ConsoleApp1
             //N36();
             //N24();
             //N27();
-            N44();
+            //N44();
+            //N40();
+            //NNN();
+            NNN2();
             Console.Read();
         }
     }
