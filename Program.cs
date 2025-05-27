@@ -69,6 +69,62 @@ namespace ConsoleApp1
             string z = string.Format("{0:C2}", (x * y));
             Console.WriteLine($"Сумма денег = {z}");
         }
+        static void N36()
+        {
+            Console.WriteLine("x\t|\ty\n_\t|\t_");
+            for (int x = 1; x <= 20; x += 2)
+            {
+                int y = 5 * x - 2;
+                Console.WriteLine($" {x}\t|\t{y}\n_\t|\t_\n");
+            }
+        }
+        static void N24()
+        {
+            Random r = new Random();
+            int a = 0;
+            for (int i = 0; i < 8; i++)
+            {
+                a = r.Next(-20,30); ;
+                Console.WriteLine(a % 2 == 0? (a + "-четное"): (a + "-нечетное")) ;
+            }
+        }
+        static void N27()
+        {
+            switch (int.Parse(Console.ReadLine()))
+            {
+                case 1:
+                    Console.WriteLine("Понедельник");
+                    break;
+                case 2:
+                    Console.WriteLine("Вторник");
+                    break;
+                case 3:
+                    Console.WriteLine("Среда");
+                    break;
+                case 4:
+                    Console.WriteLine("Четверг");
+                    break;
+                case 5:
+                    Console.WriteLine("Пятница");
+                    break;
+                case 6:
+                    Console.WriteLine("Суббота");
+                    break;
+                case 7:
+                    Console.WriteLine("Воскресенье");
+                    break;
+                default:
+                    Console.WriteLine("Не верный день недели");
+                    break;
+            }
+        }
+        static void N44()
+        {
+            for (int i = 102; i<200; i+=3)
+            {
+                Console.WriteLine(i);
+            }
+        }
         static void Main(string[] args)
         {
             //N1();
@@ -77,7 +133,11 @@ namespace ConsoleApp1
             //N4();
             //N5();
             //N6();
-            N8();
+            //N8();
+            //N36();
+            //N24();
+            //N27();
+            N44();
             Console.Read();
         }
     }
