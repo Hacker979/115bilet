@@ -60,6 +60,14 @@ namespace ConsoleApp1
             Console.WriteLine($"{x} - {y} = {x - y}");
             Console.WriteLine($"{x} * {y} = {x * y}");
         }
+        static void N7()
+        {
+            Console.Write("как тебя зовут? ");
+            string x = Console.ReadLine();
+            Console.Write("Сколько тебе лет? ");
+            int y = int.Parse(Console.ReadLine());
+            Console.WriteLine($"{x}, ты родился в {2025-y} году.");
+        }
         static void N8()
         {
             Console.Write("Номинал купюры = ");
@@ -78,6 +86,16 @@ namespace ConsoleApp1
                 Console.WriteLine($" {x}\t|\t{y}\n_\t|\t_\n");
             }
         }
+        static void N23()
+        {
+            Random r = new Random();
+            int a = 0;
+            for (int i = 0; i < 10; i++)
+            {
+                a = r.Next(-30, 30); ;
+                Console.WriteLine(a > 0 ? (a + "-положительное") : (a + "-отрицательное"));
+            }
+        }
         static void N24()
         {
             Random r = new Random();
@@ -86,6 +104,16 @@ namespace ConsoleApp1
             {
                 a = r.Next(-20,30); ;
                 Console.WriteLine(a % 2 == 0? (a + "-четное"): (a + "-нечетное")) ;
+            }
+        }
+        static void N25()
+        {
+            Random r = new Random();
+            int a = 0;
+            for (int i = 0; i < 10; i++)
+            {
+                a = r.Next(-20, 20); ;
+                Console.Write(a > 0 ? a % 2 == 0 ? (a + "-четное\n") : (a + "-нечетное\n") : "");
             }
         }
         static void N27()
@@ -150,9 +178,9 @@ namespace ConsoleApp1
         {
             int a = int.Parse(Console.ReadLine());
             int i = 0;
-            if (a > 0)
+            while (a > 0)
             {
-                a = a % 10;
+                a = a / 10;
                 i++;
             }
             Console.WriteLine(i);
@@ -172,7 +200,10 @@ namespace ConsoleApp1
             //N44();
             //N40();
             //NNN();
-            NNN2();
+            //NNN2();
+            //N7();
+            //N23();
+            N25();
             Console.Read();
         }
     }
