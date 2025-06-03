@@ -86,6 +86,12 @@ namespace ConsoleApp1
                 Console.WriteLine($" {x}\t|\t{y}\n_\t|\t_\n");
             }
         }
+        static void N22()
+        {
+            int a = int.Parse(Console.ReadLine());
+            if (a % 3 == 0) Console.WriteLine($"число {a} делитель трем ");
+            else Console.WriteLine($"число {a} не делитель трем ");
+        }
         static void N23()
         {
             Random r = new Random();
@@ -203,7 +209,8 @@ namespace ConsoleApp1
             //NNN2();
             //N7();
             //N23();
-            N25();
+            //N25();
+            N22();
             Console.Read();
         }
     }
