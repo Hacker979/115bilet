@@ -191,6 +191,44 @@ namespace ConsoleApp1
             }
             Console.WriteLine(i);
         }
+        //найти корни квадратного уравнения https://metanit.com/sharp/aspnet6/ https://metanit.com/sharp/aspnetmvc/
+        static void NNN3()
+        {
+            Console.WriteLine("введите квадратное уравнение:");
+            Console.Write("ax2=");
+            int a = int.Parse(Console.ReadLine());
+            Console.Write("bx=");
+            int b = int.Parse(Console.ReadLine());
+            Console.Write("c=");
+            int c = int.Parse(Console.ReadLine());
+            Console.WriteLine($"формула {a}x2 + {b}x + {c}");
+
+            double D = Math.Pow(b, 2) - (4 * a * c);
+
+            int p = 0;
+            if (D > 0) p = 1;
+            else if (D == 0) p = 0;
+            else p = -1;
+
+            switch (p)
+            {
+                case 1:
+                    Console.WriteLine("Уравнение имеет два корня");
+                    double x1 = (-b + Math.Sqrt(D)) / (2 * a);
+                    double x2 = (-b - Math.Sqrt(D)) / (2 * a);
+                    Console.WriteLine($"x1 = {x1}\nx2 = {x2}");
+                    break;
+                case 0:
+                    Console.WriteLine("Уравнение имеет один корень");
+                    double x = -b / (2 * a);
+                    Console.WriteLine($"x = {x}");
+                    break;
+                case -1:
+                    Console.WriteLine("Уравнение не имеет корней");
+                    break;
+            }
+
+        }
         static void Main(string[] args)
         {
             //N1();
@@ -210,7 +248,8 @@ namespace ConsoleApp1
             //N7();
             //N23();
             //N25();
-            N22();
+            //N22();
+            NNN3();
             Console.Read();
         }
     }
